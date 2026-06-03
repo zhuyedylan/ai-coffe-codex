@@ -266,7 +266,7 @@ with tabs[0]:
     ```
     """)
 
-    st.image("https://upload.wikimedia.org/wikipedia/commons/e/eb/Random_forest_diagram_complete.png",
+    st.image("assets/random_forest.png",
              caption="随机森林示意图", width=600)
 
 with tabs[1]:
