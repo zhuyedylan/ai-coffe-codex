@@ -8,7 +8,7 @@ from core import param_engine, material_config
 st.header("🖨️ 打印参数建议")
 st.markdown("根据配方智能推荐3D打印参数")
 
-with st.expander(「💡 使用帮助」):
+with st.expander("💡 使用帮助"):
     st.markdown("""
     - 调整下方各成分含量，模拟不同配方
     - 点击「生成推荐参数」获取打印设置建议

@@ -1,7 +1,26 @@
-<claude-mem-context>
-# Memory Context
+# AI-3D咖啡渣材料配方预测系统
 
-# [ai-coffe-codex] recent context, 2026-06-03 12:46pm GMT+8
+> iCloud 协作项目 — 跨设备接力开发
+> 项目详情见 CLAUDE.md（如存在）
 
-No previous sessions found.
-</claude-mem-context>
+## 项目简介
+
+Streamlit应用 — AI预测3D打印咖啡渣材料配方参数
+
+## 工作接力区 / Task Handoff
+
+> 此区域由 AI 在每次会话结束时自动维护，供跨设备接力使用。
+> 切换电脑时，新会话的 AI 先读此区了解上次进度再继续工作。
+
+**最后更新**: 2026-06-03 13:00 (办公室 zy-Mac-mini-office)
+**当前阶段**: 待启动
+**工作机器**: —
+
+### 当前任务
+- 暂无
+
+### 下一步计划
+- 暂无
+
+### 注意事项
+- 暂无
