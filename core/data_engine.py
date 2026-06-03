@@ -33,32 +33,31 @@ def generate_sample_data():
     target_name = target['name'] if target else 'score'
 
     base_configs = [
-        # Low PLA (88-90%) - more room for additives, best sustainability balance
-        {'pla_percent': 88, 'coffee_percent': 7, 'eso_percent': 2.5, 'citric_percent': 1.8, 'score': 8.0},
-        {'pla_percent': 89, 'coffee_percent': 6.5, 'eso_percent': 2.8, 'citric_percent': 2.0, 'score': 8.5},
-        {'pla_percent': 88.5, 'coffee_percent': 7.5, 'eso_percent': 2.0, 'citric_percent': 1.5, 'score': 7.8},
-        {'pla_percent': 90, 'coffee_percent': 6, 'eso_percent': 2.2, 'citric_percent': 1.6, 'score': 7.5},
-        # Mid-low PLA (90-92%) - moderate additive levels
-        {'pla_percent': 91, 'coffee_percent': 5, 'eso_percent': 2.0, 'citric_percent': 1.2, 'score': 6.8},
-        {'pla_percent': 91.5, 'coffee_percent': 5.5, 'eso_percent': 1.8, 'citric_percent': 1.0, 'score': 6.5},
-        {'pla_percent': 90.5, 'coffee_percent': 5.8, 'eso_percent': 2.5, 'citric_percent': 1.4, 'score': 7.2},
-        # Mid PLA (92-94%) - typical composition
-        {'pla_percent': 93, 'coffee_percent': 4, 'eso_percent': 1.5, 'citric_percent': 0.8, 'score': 5.5},
-        {'pla_percent': 93.5, 'coffee_percent': 3.5, 'eso_percent': 1.8, 'citric_percent': 1.0, 'score': 5.8},
-        {'pla_percent': 92.5, 'coffee_percent': 4.5, 'eso_percent': 1.2, 'citric_percent': 0.7, 'score': 5.2},
-        {'pla_percent': 94, 'coffee_percent': 3, 'eso_percent': 1.5, 'citric_percent': 0.6, 'score': 4.8},
-        # High PLA (94-96%) - minimal additives
-        {'pla_percent': 95, 'coffee_percent': 2.5, 'eso_percent': 1.0, 'citric_percent': 0.5, 'score': 4.2},
-        {'pla_percent': 95.5, 'coffee_percent': 2, 'eso_percent': 1.2, 'citric_percent': 0.4, 'score': 3.8},
-        {'pla_percent': 94.5, 'coffee_percent': 3, 'eso_percent': 0.8, 'citric_percent': 0.5, 'score': 4.0},
-        # Very high PLA (96-98%) - barely any additive
-        {'pla_percent': 97, 'coffee_percent': 1.5, 'eso_percent': 0.6, 'citric_percent': 0.3, 'score': 3.0},
-        {'pla_percent': 97.5, 'coffee_percent': 1, 'eso_percent': 0.8, 'citric_percent': 0.2, 'score': 2.5},
-        {'pla_percent': 96.5, 'coffee_percent': 2, 'eso_percent': 0.5, 'citric_percent': 0.3, 'score': 3.2},
-        # Extreme (98-99%) - almost pure PLA
-        {'pla_percent': 98, 'coffee_percent': 1, 'eso_percent': 0.4, 'citric_percent': 0.2, 'score': 2.0},
-        {'pla_percent': 98.5, 'coffee_percent': 0.8, 'eso_percent': 0.3, 'citric_percent': 0.1, 'score': 1.5},
-        {'pla_percent': 99, 'coffee_percent': 0.5, 'eso_percent': 0.2, 'citric_percent': 0.1, 'score': 1.0},
+        # Optimal zone: PLA ~95%, best balance of strength + sustainability
+        {'pla_percent': 95, 'coffee_percent': 2.5, 'eso_percent': 1.5, 'citric_percent': 0.8, 'score': 9.2},
+        {'pla_percent': 94.5, 'coffee_percent': 3, 'eso_percent': 1.8, 'citric_percent': 1.0, 'score': 9.0},
+        {'pla_percent': 95.5, 'coffee_percent': 2, 'eso_percent': 1.2, 'citric_percent': 0.6, 'score': 8.8},
+        {'pla_percent': 94, 'coffee_percent': 3.5, 'eso_percent': 2.0, 'citric_percent': 1.2, 'score': 8.6},
+        {'pla_percent': 96, 'coffee_percent': 1.8, 'eso_percent': 1.0, 'citric_percent': 0.5, 'score': 8.5},
+        # Near-optimal: PLA 93-97%
+        {'pla_percent': 93, 'coffee_percent': 4, 'eso_percent': 2.5, 'citric_percent': 1.5, 'score': 7.8},
+        {'pla_percent': 96.5, 'coffee_percent': 1.5, 'eso_percent': 0.8, 'citric_percent': 0.4, 'score': 7.5},
+        {'pla_percent': 93.5, 'coffee_percent': 3.5, 'eso_percent': 2.2, 'citric_percent': 1.3, 'score': 7.6},
+        {'pla_percent': 97, 'coffee_percent': 1.2, 'eso_percent': 0.6, 'citric_percent': 0.3, 'score': 7.0},
+        # Declining: PLA 90-93%
+        {'pla_percent': 92, 'coffee_percent': 5, 'eso_percent': 2.0, 'citric_percent': 1.0, 'score': 6.2},
+        {'pla_percent': 91, 'coffee_percent': 5.5, 'eso_percent': 2.8, 'citric_percent': 1.8, 'score': 5.8},
+        {'pla_percent': 90, 'coffee_percent': 6, 'eso_percent': 2.5, 'citric_percent': 1.6, 'score': 5.2},
+        {'pla_percent': 89, 'coffee_percent': 7, 'eso_percent': 2.2, 'citric_percent': 1.5, 'score': 4.8},
+        # Low: PLA 88-89%
+        {'pla_percent': 88.5, 'coffee_percent': 7.5, 'eso_percent': 2.0, 'citric_percent': 1.5, 'score': 4.2},
+        {'pla_percent': 88, 'coffee_percent': 8, 'eso_percent': 1.5, 'citric_percent': 1.0, 'score': 3.5},
+        # Declining: PLA 97-99% (too pure, less additive benefit)
+        {'pla_percent': 97.5, 'coffee_percent': 1, 'eso_percent': 0.5, 'citric_percent': 0.2, 'score': 6.0},
+        {'pla_percent': 98, 'coffee_percent': 0.8, 'eso_percent': 0.4, 'citric_percent': 0.2, 'score': 4.5},
+        {'pla_percent': 98.5, 'coffee_percent': 0.6, 'eso_percent': 0.3, 'citric_percent': 0.1, 'score': 3.0},
+        {'pla_percent': 99, 'coffee_percent': 0.5, 'eso_percent': 0.2, 'citric_percent': 0.1, 'score': 1.8},
+        {'pla_percent': 99, 'coffee_percent': 0.5, 'eso_percent': 0.3, 'citric_percent': 0.2, 'score': 2.0},
     ]
 
     df = pd.DataFrame(base_configs)

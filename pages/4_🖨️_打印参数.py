@@ -8,10 +8,10 @@ from core import param_engine, material_config
 st.header("🖨️ 打印参数建议")
 st.markdown("根据配方智能推荐3D打印参数")
 
-with st.expander("💡 使用帮助"):
+with st.expander(「💡 使用帮助」):
     st.markdown("""
     - 调整下方各成分含量，模拟不同配方
-    - 点击"生成推荐参数"获取打印设置建议
+    - 点击「生成推荐参数」获取打印设置建议
     - 每个参数下方有调整原因的说明
     - 常见问题板块提供了打印故障的解决方案
     """)
@@ -99,4 +99,4 @@ if 'print_params' in st.session_state:
             for sol in solution['solutions']:
                 st.markdown(f"- ✅ {sol}")
 else:
-    st.info("💡 调整上方配方后点击"生成推荐参数"")
+    st.info("💡 调整上方配方后点击「生成推荐参数」")
