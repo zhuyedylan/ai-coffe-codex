@@ -1,0 +1,101 @@
+{
+  "materials": [
+    {
+      "id": "mat_pla",
+      "name": "pla_percent",
+      "label": "PLA含量",
+      "display_name": "PLA (聚乳酸)",
+      "unit": "%",
+      "range": [
+        88,
+        99
+      ],
+      "default_value": 93,
+      "role": "基体材料",
+      "role_type": "matrix",
+      "description": "主要塑料基体，占总料88-99%",
+      "is_required": true,
+      "order": 1,
+      "print_rules": {
+        "temp_adjust_per_unit": 0,
+        "speed_adjust_per_unit": 0
+      }
+    },
+    {
+      "id": "mat_coffee",
+      "name": "coffee_percent",
+      "label": "咖啡渣含量",
+      "display_name": "咖啡渣",
+      "unit": "%",
+      "range": [
+        0.5,
+        8
+      ],
+      "default_value": 4,
+      "role": "填料",
+      "role_type": "filler",
+      "description": "环保填料，小比例添加改善质感",
+      "is_required": true,
+      "order": 2,
+      "print_rules": {
+        "temp_adjust_per_unit": 0.5,
+        "speed_adjust_per_unit": -0.3
+      }
+    },
+    {
+      "id": "mat_eso",
+      "name": "eso_percent",
+      "label": "ESO含量",
+      "display_name": "ESO (环氧大豆油)",
+      "unit": "%",
+      "range": [
+        0.2,
+        3
+      ],
+      "default_value": 1.5,
+      "role": "扩链剂",
+      "role_type": "chain_extender",
+      "description": "修复分子链，小剂量改善韧性",
+      "is_required": true,
+      "order": 3,
+      "print_rules": {
+        "temp_adjust_per_unit": -0.5,
+        "speed_adjust_per_unit": 0
+      }
+    },
+    {
+      "id": "mat_citric",
+      "name": "citric_percent",
+      "label": "柠檬酸含量",
+      "display_name": "柠檬酸",
+      "unit": "%",
+      "range": [
+        0.1,
+        2
+      ],
+      "default_value": 0.8,
+      "role": "偶联剂",
+      "role_type": "coupling_agent",
+      "description": "偶联剂，微量改善界面结合",
+      "is_required": false,
+      "order": 4,
+      "print_rules": {
+        "temp_adjust_per_unit": 0,
+        "speed_adjust_per_unit": 0
+      }
+    }
+  ],
+  "target_variables": [
+    {
+      "name": "score",
+      "label": "韧性评分",
+      "range": [
+        1,
+        10
+      ],
+      "description": "材料韧性综合评价（基于力学测试）"
+    }
+  ],
+  "active_target": "score",
+  "role_types": []
+}
